@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="development.sqlite3">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="main">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="profiles"/>
+    <table id="4" parent="2" name="schema_migrations"/>
+    <table id="5" parent="2" name="sqlite_master"/>
+    <table id="6" parent="2" name="sqlite_sequence"/>
+    <table id="7" parent="2" name="todo_items"/>
+    <table id="8" parent="2" name="todo_lists"/>
+    <table id="9" parent="2" name="users"/>
+    <column id="10" parent="3" name="id">
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="11" parent="3" name="gender">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+    </column>
+    <column id="12" parent="3" name="birth_year">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+    </column>
+    <column id="13" parent="3" name="first_name">
+      <Position>3</Position>
+      <DataType>varchar|0</DataType>
+    </column>
+    <column id="14" parent="3" name="last_name">
+      <Position>4</Position>
+      <DataType>varchar|0</DataType>
+    </column>
+    <column id="15" parent="3" name="user_id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+    </column>
+    <column id="16" parent="3" name="created_at">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="3" name="updated_at">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="18" parent="3" name="index_profiles_on_user_id">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="19" parent="3">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="20" parent="4" name="version">
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="21" parent="4" name="unique_schema_migrations">
+      <ColNames>version</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="22" parent="5" name="type">
+      <DataType>text|0</DataType>
+    </column>
+    <column id="23" parent="5" name="name">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="24" parent="5" name="tbl_name">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="25" parent="5" name="rootpage">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+    </column>
+    <column id="26" parent="5" name="sql">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="27" parent="6" name="name">
+      <DataType>|0</DataType>
+    </column>
+    <column id="28" parent="6" name="seq">
+      <Position>1</Position>
+      <DataType>|0</DataType>
+    </column>
+    <column id="29" parent="7" name="id">
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="7" name="due_date">
+      <Position>1</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="31" parent="7" name="title">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+    </column>
+    <column id="32" parent="7" name="description">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="33" parent="7" name="completed">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+    </column>
+    <column id="34" parent="7" name="todo_list_id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+    </column>
+    <column id="35" parent="7" name="created_at">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="7" name="updated_at">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="37" parent="7" name="index_todo_items_on_todo_list_id">
+      <ColNames>todo_list_id</ColNames>
+    </index>
+    <key id="38" parent="7">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="39" parent="8" name="id">
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="40" parent="8" name="list_name">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+    </column>
+    <column id="41" parent="8" name="list_due_date">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="42" parent="8" name="created_at">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="8" name="updated_at">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="8" name="user_id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+    </column>
+    <index id="45" parent="8" name="index_todo_lists_on_user_id">
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="46" parent="8">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="47" parent="9" name="id">
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="48" parent="9" name="username">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+    </column>
+    <column id="49" parent="9" name="password_digest">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+    </column>
+    <column id="50" parent="9" name="created_at">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="9" name="updated_at">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="52" parent="9">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
